@@ -1,1 +1,61 @@
-
+:root{
+  --card-w: 220px;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 22px;
+  background:#f2f4f8;
+  color:#111;
+  text-align:center;
+}
+header p{margin-top:4px;color:#555}
+#upload-area, #admin-area{
+  margin: 12px auto;
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+#gallery{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:18px;
+}
+.photo-card{
+  width:var(--card-w);
+  background:white;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  position:relative;
+}
+.photo-card img{
+  display:block;
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.photo-meta{
+  padding:8px;
+  font-size:13px;
+  color:#444;
+}
+.delete-btn{
+  position:absolute;
+  top:8px;
+  right:8px;
+  background:#e74c3c;
+  color:white;
+  border:none;
+  padding:6px 8px;
+  border-radius:6px;
+  cursor:pointer;
+  display:none; /* only visible to admin */
+}
+.info{color:#666;font-size:13px;margin-top:8px}
+button{cursor:pointer}
