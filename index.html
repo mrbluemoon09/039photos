@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Photo Album</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📸 My Photo Album</h1>
+    <p>Anyone can upload. Admin can delete/manage.</p>
+  </header>
 
+  <!-- Upload area -->
+  <section id="upload-area">
+    <input type="file" id="photoInput" accept="image/*">
+    <button id="uploadBtn">Upload Photo</button>
+    <div id="uploadStatus"></div>
+  </section>
+
+  <!-- Admin login -->
+  <section id="admin-area">
+    <input type="email" id="adminEmail" placeholder="Admin email">
+    <input type="password" id="adminPassword" placeholder="Password">
+    <button id="loginBtn">Login as Admin</button>
+    <button id="logoutBtn" style="display:none;">Logout</button>
+    <div id="authStatus"></div>
+  </section>
+
+  <hr>
+
+  <h2>Gallery</h2>
+  <main id="gallery" aria-live="polite"></main>
+
+  <!-- App script (module so we can import firebase modern SDK) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
