@@ -1,61 +1,46 @@
-:root{
-  --card-w: 220px;
-}
-*{box-sizing:border-box}
-body{
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
   margin: 0;
-  padding: 22px;
-  background:#f2f4f8;
-  color:#111;
-  text-align:center;
+  text-align: center;
 }
-header p{margin-top:4px;color:#555}
-#upload-area, #admin-area{
-  margin: 12px auto;
-  display:flex;
-  gap:8px;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
+
+header {
+  background: #fff;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ddd;
 }
-#gallery{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  justify-content:center;
-  padding:18px;
+
+h1 {
+  margin: 0;
 }
-.photo-card{
-  width:var(--card-w);
-  background:white;
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
-  position:relative;
+
+#uploadBtn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
 }
-.photo-card img{
-  display:block;
-  width:100%;
-  height:160px;
-  object-fit:cover;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  padding: 15px;
 }
-.photo-meta{
-  padding:8px;
-  font-size:13px;
-  color:#444;
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.2s;
 }
-.delete-btn{
-  position:absolute;
-  top:8px;
-  right:8px;
-  background:#e74c3c;
-  color:white;
-  border:none;
-  padding:6px 8px;
-  border-radius:6px;
-  cursor:pointer;
-  display:none; /* only visible to admin */
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
-.info{color:#666;font-size:13px;margin-top:8px}
-button{cursor:pointer}
