@@ -1,28 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Gallery</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Go App Screen Mimic</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .app-container {
+            max-width: 400px; /* Typical phone screen width */
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .app-title {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .app-title img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .options-menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+        }
+        .category-item {
+            text-align: center;
+            width: 23%; /* To fit 4 items */
+        }
+        .category-image {
+            width: 100%;
+            height: 70px; /* Placeholder size */
+            background-color: #eee;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .category-label {
+            font-size: 12px;
+            color: #333;
+        }
+        .timeline-header {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 15px;
+            color: #333;
+        }
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .photo-item {
+            width: 33.33%; /* 3 photos per row */
+            height: 120px; /* Fixed height for squares */
+            padding: 1px;
+            box-sizing: border-box;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            padding: 5px 0;
+        }
+        .nav-item {
+            text-align: center;
+            padding: 5px;
+            color: #666;
+            font-size: 12px;
+        }
+        .nav-item.active {
+            color: #1a73e8; /* Google Blue */
+            font-weight: 500;
+        }
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+    </style>
 </head>
 <body>
-  <header class="top-bar">
-    <h1>📷 My Gallery</h1>
-    <button id="uploadBtn">Upload Photos</button>
-    <input type="file" id="fileInput" accept="image/*" multiple hidden>
-  </header>
 
-  <section class="categories">
-    <div class="category">People</div>
-    <div class="category">Selfies</div>
-    <div class="category">Nature</div>
-    <div class="category">Food</div>
-  </section>
+<div class="app-container">
+    
+    <div class="header">
+        <div class="app-title">
+            <img src="https://via.placeholder.com/24/0000FF/FFFFFF?text=G" alt="Gallery Go Icon">
+            <span>Gallery Go</span>
+        </div>
+        <div class="options-menu">&#x22EE;</div> </div>
 
-  <h2 class="month-title">October</h2>
-  <section class="gallery" id="gallery"></section>
+    <div class="categories">
+        <div class="category-item">
+            <div class="category-image"><img src="https://via.placeholder.com/70/4285F4/FFFFFF?text=P" alt="People Category"></div>
+            <div class="category-label">People</div>
+        </div>
+        <div class="category-item">
+            <div class="category-image"><img src="https://via.placeholder.com/70/DB4437/FFFFFF?text=S" alt="Selfies Category"></div>
+            <div class="category-label">Selfies</div>
+        </div>
+        <div class="category-item">
+            <div class="category-image"><img src="https://via.placeholder.com/70/0F9D58/FFFFFF?text=N" alt="Nature Category"></div>
+            <div class="category-label">Nature</div>
+        </div>
+        <div class="category-item">
+            <div class="category-image"><img src="https://via.placeholder.com/70/F4B400/FFFFFF?text=F" alt="Food Category"></div>
+            <div class="category-label">Food</div>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="timeline-header">October</div>
+
+    <div class="photo-grid">
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Horse" alt="Photo of a horse"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Carrots" alt="Photo of carrots"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Beach" alt="Photo of a beach/palms"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Woman+Smiling" alt="Photo of a woman smiling"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Market+Stall" alt="Photo of a market stall"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Lemons" alt="Photo of lemons in a bowl"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Grains" alt="Photo of grains/beans"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Bus" alt="Photo of a bus on the road"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=Art" alt="Photo of abstract art/design"></div>
+        <div class="photo-item"><img src="https://via.placeholder.com/120x120/A8A8A8/FFFFFF?text=People" alt="Photo of people in traditional clothes"></div>
+    </div>
+
+    <div class="timeline-header">September</div>
+
+    <div class="bottom-nav">
+        <div class="nav-item active">
+            <div class="nav-icon">&#x1F4F7;</div> <div>Photos</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">&#x1F4C1;</div> <div>Folders</div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
