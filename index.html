@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>📸 My Gallery</h1>
-    <button id="uploadBtn">Upload Photo</button>
+  <header class="top-bar">
+    <h1>📷 My Gallery</h1>
+    <button id="uploadBtn">Upload Photos</button>
     <input type="file" id="fileInput" accept="image/*" multiple hidden>
   </header>
 
+  <section class="categories">
+    <div class="category">People</div>
+    <div class="category">Selfies</div>
+    <div class="category">Nature</div>
+    <div class="category">Food</div>
+  </section>
+
+  <h2 class="month-title">October</h2>
   <section class="gallery" id="gallery"></section>
 
   <script src="script.js"></script>
